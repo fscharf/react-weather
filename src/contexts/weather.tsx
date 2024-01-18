@@ -71,8 +71,10 @@ const WeatherProvider = ({ children }: React.PropsWithChildren) => {
   }
 
   useEffect(() => {
-    toggleCurrentLocation()
-  }, [])
+    if (weather === null) {
+      toggleCurrentLocation()
+    }
+  }, [location])
 
   useEffect(() => {
     if (debouncedValue) {

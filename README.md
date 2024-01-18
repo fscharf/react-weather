@@ -1,30 +1,59 @@
-# React + TypeScript + Vite
+# React Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple application to search cities and retrieve weather data. You can easily set your current location whether the browser supports it. It has a simple weather display and 5-day forecast.
 
-Currently, two official plugins are available:
+![Wallpaper](https://i.imgur.com/jeHO9rf.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Axios
+- TailwindCSS
+- Prettier + Eslint
+- Jest
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Requirements
 
-- Configure the top-level `parserOptions` property like this:
+Yarn v1.22+
+Node.js v20+
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Installation
+
+- Clone the repository
+- Run `yarn install` to install dependencies.
+- Create an account on [OpenWeatherMap](https://openweathermap.org/) in order to retrieve your **API Key**.
+- Create a local `.env` file in the root project with the following variables:
+
+```
+  VITE_API_KEY=[YOUR_API_KEY_HERE]
+  VITE_API_URL=https://api.openweathermap.org/data/2.5
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Done! Follow the next steps.
+
+## Start
+
+Run `yarn dev` to start development server.
+
+## Testing
+
+- `yarn test`: Run tests locally.
+- `yarn test:watch`: Run tests locally and continously.
+
+## Linting
+
+- `yarn lint`: Retrieve code formatting errors or inconsistences.
+- `yarn lint:fix`: Fix all code formatting errors.
+- `yarn format`: Format all files inside `src` folder accordingly to Prettier configuration.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
